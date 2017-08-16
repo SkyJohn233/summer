@@ -73,8 +73,6 @@ namespace summer.Dialogs
                     var answer = searchResults[0].Answer;
                     if (answer.Equals("No good match found in the KB"))
                         answer = GetRandomResString();
-                    else if (searchResults[0].Score > 97.0)
-                        answer = "嘿嘿，就知道你要问我这个，你可算问对人了。" + searchResults[0].Answer;
                     else if (searchResults[0].Score < 50.0)
                         answer = "不好意思，我对我的回答不很自信，我觉得你可能在问：" + searchResults[0].Questions[0] + "我觉得可能的答案是：" + searchResults[0].Answer;
                     await context.PostAsync(answer);
