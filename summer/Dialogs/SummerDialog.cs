@@ -25,7 +25,7 @@ namespace summer.Dialogs
         {
             String[] randomResponseString = { $"不是很懂你们大佬在说什么，请问我一点关于俱乐部的问题吧！", $"啊咧咧，我刚刚开小差了，请换种方式再说一下吧", $"主人还没有教我这些哦，请问我一些俱乐部的问题吧" };
             Random ran = new Random();
-            int key = ran.Next(0, randomResponseString.Length - 1);
+            int key = ran.Next(0, randomResponseString.Length);
             return randomResponseString[key];
         }
 
